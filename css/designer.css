@@ -1,0 +1,7 @@
+.waf-widget.waf-matrixreloaded {
+    overflow: hidden;
+}
+.waf-widget.waf-matrixreloaded>div.waf-widget.waf-container.waf-studio-donotsave {
+    opacity: .8;
+}
+

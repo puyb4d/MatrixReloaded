@@ -1,16 +1,13 @@
 .waf-widget.waf-matrixreloaded {
-    /*float: left;
-*/
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
     overflow: scroll;
-    
 }
 
 .waf-widget.waf-matrixreloaded>div {
     position: relative;
-    margin: 10px;
+}
+.waf-widget.waf-matrixreloaded>div>div.waf-widget.waf-container {
+    position: absolute;
+    overflow: hidden;
     border: 1px solid #999999;
     border-radius: 4px;
     background: white;
@@ -19,3 +16,9 @@
     height:200px;
 }
 
+.waf-widget.waf-matrixreloaded>div>div.waf-widget.waf-container.waf-studio-donotsave {
+    font-size: 24px;
+    padding: 10px;
+    opacity: .5;
+    color: #ccc;
+}

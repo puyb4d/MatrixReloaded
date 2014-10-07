@@ -19,6 +19,7 @@
         {"id": "Container/package.json", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
         {"id": "MatrixReloaded/widget.js", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
         {"id": "MatrixReloaded/css/widget.css", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
-        {"id": "MatrixReloaded/designer.js", "studioOnly": true, "version": "1.0.0", "path": "WIDGETS_CUSTOM"}
+        {"id": "MatrixReloaded/designer.js", "studioOnly": true, "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+        {"id": "MatrixReloaded/css/designer.css", "studioOnly": true, "version": "1.0.0", "path": "WIDGETS_CUSTOM"}
     ]
 }
