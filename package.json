@@ -8,7 +8,7 @@
     "copyright": "(c) 2014 4D",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Wakanda/MatrixReloaded.git"
+        "url": "https://github.com/Puyb4D/MatrixReloaded.git"
     },
     "keywords": ["wakanda", "widget"],
     "engines": {"wakanda": ">= 10"},
