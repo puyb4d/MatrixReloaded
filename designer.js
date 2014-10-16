@@ -54,7 +54,11 @@
     });
 
     MatrixReloaded.studioOnResize(function() {
-        //debugger;
         updateSize.call(this);
     });
+
+    MatrixReloaded.prototype._upgradeCSSRules = function() {}; // don't mess with the stylesheets in the studio
+
+    MatrixReloaded.addEvent('rowDraw');
+
 });

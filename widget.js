@@ -143,12 +143,40 @@ WAF.define('MatrixReloaded', ['waf-core/widget', 'Container'], function(widget, 
         return this._getColumnCount();
     };
 
-    proto.init = function() {
+    proto._upgradeCSSRules = function() {
         // get master css and transform it in classes
-        if(!window.Designer && this.repeatedWidget()) {
+        if(this.repeatedWidget()) {
             upgradeWidgetAndRules(this.repeatedWidget());
             this.repeatedWidget().allChildren().forEach(upgradeWidgetAndRules);
         }
+    };
+
+    proto.init = function() {
+        this._upgradeCSSRules();
+
+        var scrolled = this.getScrolledNode();
+        $(scrolled).on('click', function(event) {
+            if(!this.collection()) {
+                return;
+            }
+
+            var el = event.target;
+            while(el.parentNode !== scrolled && el !== document.body) {
+                el = el.parentNode;
+            }
+            if(el.parentNode === scrolled) {
+                this.collection().select(this.getPosition(el));
+            }
+        }.bind(this));
+
+        this.collection.subscribe('currentElementChange', function() {
+            var position = this.collection().getPosition();
+            this.invoke('removeClass', 'waf-state-selected');
+            var widget = this.widgetByPosition(position);
+            if(widget) {
+                widget.addClass('waf-state-selected');
+            }
+        }, this);
     };
 
 
